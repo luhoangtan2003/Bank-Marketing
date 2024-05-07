@@ -1,0 +1,70 @@
+Citation Request:
+  This dataset is public available for research. The details are described in [Moro et al.; 2011].
+  Please include this citation if you plan to use this database:
+
+  [Moro et al.; 2011] S. Moro; R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology.
+  In P. Novais et al. (Eds.); Proceedings of the European Simulation and Modelling Conference - ESM'2011; pp. 117-121; Guimarães; Portugal; October; 2011. EUROSIS.
+
+  Available at: [pdf] http://hdl.handle.net/1822/14838
+                [bib] http://www3.dsi.uminho.pt/pcortez/bib/2011-esm-1.txt
+
+1. Title: Bank Marketing
+
+2. Sources
+   Created by: Paulo Cortez (Univ. Minho) and Sérgio Moro (ISCTE-IUL) @ 2012
+
+3. Past Usage:
+
+  The full dataset was described and analyzed in:
+
+  S. Moro; R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology.
+  In P. Novais et al. (Eds.); Proceedings of the European Simulation and Modelling Conference - ESM'2011; pp. 117-121; Guimarães;
+  Portugal; October; 2011. EUROSIS.
+
+4. Relevant Information:
+
+   The data is related with direct marketing campaigns of a Portuguese banking institution.
+   The marketing campaigns were based on phone calls. Often; more than one contact to the same client was required;
+   in order to access if the product (bank term deposit) would be (or not) subscribed.
+
+   There are two datasets:
+      1) Bank Full.csv with all examples; ordered by date (from May 2008 to November 2010).
+      2) Bank.csv with 10% of the examples (4521); randomly selected from Bank Full.csv.
+   The smallest dataset is provided to test more computationally demanding machine learning algorithms (e.g. SVM).
+
+   The classification goal is to predict if the client will subscribe a term deposit (variable y).
+
+5. Number of Instances: 45211 for Bank Full.csv (4521 for bank.csv)
+
+6. Number of Attributes: 16 + output attribute.
+
+7. Attribute information:
+
+   For more information; read [Moro et al.; 2011].
+
+   Input variables:
+   # Dữ liệu khách hàng ngân hàng:
+   1 - Age (numeric)
+   2 - Job : type of job (categorical: "Admin";"Unknown";"Unemployed";"Management";"Housemaid";"Entrepreneur";"Student";
+                                       "Blue-collar";"Self-employed";"Retired";"Technician";"Services")
+   3 - Marital : marital status (categorical: "Married";"Divorced";"Single"; note: "Divorced" means divorced or widowed)
+   4 - Education (categorical: "Unknown";"Secondary";"Primary";"Tertiary")
+   5 - Default: has credit in default? (binary: "Yes";"No")
+   6 - Balance: average yearly balance; in euros (numeric)
+   7 - Housing: has housing loan? (binary: "Yes";"No")
+   8 - Loan: has personal loan? (binary: "Yes";"No")
+   # Liên quan đến liên hệ cuối cùng của chiến dịch hiện tại:
+   9 - Contact: contact communication type (categorical: "Unknown";"Telephone";"Cellular")
+  10 - Day: last contact day of the month (numeric)
+  11 - Month: last contact month of year (categorical: "jan"; "feb"; "mar"; ...; "nov"; "dec")
+  12 - Duration: last contact duration; in seconds (numeric)
+   # Các thuộc tính khác:
+  13 - Campaign: number of contacts performed during this campaign and for this client (numeric; includes last contact)
+  14 - Pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted)
+  15 - Previous: number of contacts performed before this campaign and for this client (numeric)
+  16 - Poutcome: outcome of the previous marketing campaign (categorical: "Unknown";"Other";"Failure";"Success")
+
+  Output variable (desired target):
+  17 - Y - has the client subscribed a term deposit? (binary: "Yes";"No")
+
+8. Missing Attribute Values: None

@@ -1,0 +1,96 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0081A7;
+}
+body .container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 30px;
+    background-color: white;
+}
+body .container header{
+    position: relative;
+    font-size: 26px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+body .container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    overflow: hidden;
+    background-color: #fff;
+}
+body .container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: black;
+}
+body .container form .fields{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .fields .input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 4px 0;
+    width: calc(100% / 3 - 15px);
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    border-radius: 5px;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+    border: 1px solid gray;
+}
+
+body .container form button{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    margin: 25px 0;
+    cursor: pointer;
+    background-color: #0081A7;
+    transition: all 0.3s linear;
+}
+
+#label{
+    font-size: 10rem;
+    font-weight: bold;
+    color: orangered;
+}
+
+@media (max-width: 600px) {form .fields .input-field{width: 100%;}}

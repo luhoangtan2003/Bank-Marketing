@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Static/JS/Home.js"></script>
+    <link type="text/css" rel="stylesheet" href="../Static/CSS/Home.css">
+    <title>Bank Marketing Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <header>DỰ DOÁN TIẾP THỊ NGÂN HÀNG</header>
+        <form method="POST" onsubmit="return Validation_Form()" action="/Predict" >
+            <div class="">
+                <span class="title">Dữ liệu khách hàng ngân hàng</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Age</label>
+                        <input name="Age" type="number" placeholder="Nhập vào tuổi" step="1">
+                    </div>                    
+                    <div class="input-field">
+                        <label>Job</label>
+                        <select name="Job">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Admin</option>
+                            <option>Unknown</option>
+                            <option>Unemployed</option>
+                            <option>Management</option>
+                            <option>Housemaid</option>
+                            <option>Entrepreneur</option>
+                            <option>Student</option>
+                            <option>Blue-collar</option>
+                            <option>Self-employed</option>
+                            <option>Retired</option>
+                            <option>Technician</option>
+                            <option>Services</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Marital</label>
+                        <select name="Marital">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Married</option>
+                            <option>Divorced</option>
+                            <option>Single</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Education</label>
+                        <select name="Education">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Unknown</option>
+                            <option>Secondary</option>
+                            <option>Primary</option>
+                            <option>Tertiary</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Default</label>
+                        <select name="Default">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Balance</label>
+                        <input name="Balance" type="number" placeholder="Nhập số dư" step="1">
+                    </div>
+                    <div class="input-field">
+                        <label>Housing</label>
+                        <select name="Housing">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Loan</label>
+                        <select name="Loan">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <span class="title">Liên quan đến liên hệ cuối cùng</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Contact</label>
+                        <select name="Contact">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Unknown</option>
+                            <option>Telephone</option>
+                            <option>Cellular</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Day</label>
+                        <select name="Day">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Month</label>
+                        <select name="Month">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                    </div>
+                </div>
+            </div>           
+            <div class="">
+                <span class="title">Các thuộc tính khác của chiến dịch</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Campaign</label>
+                        <input name="Campaign" type="number" placeholder="Nhập vào số" step="1">
+                    </div>                  
+                    <div class="input-field">
+                        <label>Pdays</label>
+                        <input name="Pdays" type="number" placeholder="Nhập vào số" step="1">
+                    </div>
+                    <div class="input-field">
+                        <label>Previous</label>
+                        <input name="Previous" type="number" placeholder="Nhập vào số" step="1">
+                    </div>
+                    <div class="input-field">
+                        <label>Poutcome</label>
+                        <select name="Poutcome">
+                            <option disabled selected>Chọn giá trị</option>
+                            <option>Unknown</option>
+                            <option>Other</option>
+                            <option>Failure</option>
+                            <option>Success</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit"> <span>Dự đoán</span> </button>
+        </form>
+    </div>
+</body>
+</html>
