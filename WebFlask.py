@@ -2,7 +2,7 @@ import flask as fl
 import numpy as np
 import pickle
 
-Model = pickle.load(open('./SaveModel/XGB.pkl', 'rb'))
+Model = pickle.load(open('./Model/XGB.pkl', mode='rb'))
 
 Flask = fl.Flask(__name__, static_url_path='/Static')
 
